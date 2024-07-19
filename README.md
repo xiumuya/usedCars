@@ -32,5 +32,5 @@
 
 ## flow diagram
 
-[](https://github.com/xiumuya/Reptile/blob/main/flow_chart_diagram/FlowchartDiagram.jpg)
+![img](https://github.com/xiumuya/Reptile/blob/main/flow_chart_diagram/FlowchartDiagram.jpg)
 
