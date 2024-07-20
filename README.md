@@ -30,10 +30,10 @@
 
 
 
-## flow diagram
+## flow chart diagram
 
 ![img](./flow_chart_diagram/FlowchartDiagram.jpg)
 
 ## warning
 
-without car mileage causes same parameters but different sh_price so that you can distinct them
+without car mileage causes same parameters but different sh_price and you can drop them but the first row retained
