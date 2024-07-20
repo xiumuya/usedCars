@@ -32,5 +32,8 @@
 
 ## flow diagram
 
-![img](./FlowchartDiagram.jpg)
+![img](./flow_chart_diagram/FlowchartDiagram.jpg)
 
+## warning
+
+without car mileage causes same parameters but different sh_price so that you can distinct them
