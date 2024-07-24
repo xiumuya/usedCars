@@ -37,3 +37,9 @@
 ## warning
 
 without car mileage causes same parameters but different sh_price and you can drop them but the first row retained
+
+
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddlepaddle
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple shapely
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddleocr
