@@ -8,11 +8,16 @@
 
 [参考博客2](https://www.cnblogs.com/feng0815/p/16656656.html)
 
+[参考博客3](https://www.cnblogs.com/Im-Victor/p/17754051.html#1_Paddle_OCR_7)
+
+[CNOCR](https://cnocr.readthedocs.io/zh-cn/stable/)
+
 ## keyword
 
 - 字体反爬
 - requests
 - fonttools
+- 中文ocr
 
 
 
@@ -36,10 +41,19 @@
 
 ## warning
 
-without car mileage causes same parameters but different sh_price and you can drop them but the first row retained
+- without car mileage causes same parameters but different sh_price and you can drop them but the first row retained
 
 
 
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddlepaddle
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple shapely
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddleocr
+### cn ocr
+
+- python版本: 3.8x
+
+
+
+#### 安装
+
+```
+pip install cnocr -i https://pypi.doubanio.com/simple
+```
+
