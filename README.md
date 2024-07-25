@@ -41,11 +41,11 @@
 
 ## warning
 
-- without car mileage causes same parameters but different sh_price and you can drop them but the first row retained
+- ~~without car mileage causes same parameters but different sh_price and you can drop them but the first row retained~~
+- 包含预测必须字段
+- ocr识别出来的结果可能会偏离正常值，我已经大致对照过一遍，有问题请fork me
 
-
-
-### cn ocr
+## cn ocr
 
 - python版本: 3.8x
 
