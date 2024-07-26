@@ -1,0 +1,73 @@
+HTTP
+1、修改NOBOOT=YES
+2、重启网卡服务 systemctl restart network
+3、使用CMD连接 ssh root@IP地址
+4、配置Yum仓库 阿里云开源镜像站 Cnetos7
+5、清除Yum缓存 yum clean all
+6、加载缓存 yum makecache
+7、测试yum源 yum repolist all
+8、安装http yum install -y httpd
+9、http配置文件位置：/etc/httpd/conf/httpd.conf
+10、在/var/www/html目录创建文本
+11、关闭防火墙 systemctl stop firewalld
+
+
+
+DHCP
+1、网卡配置文件中需改为static
+2、绑定网卡 nmcli connection add con-name static type ethernet ifname ens33 ip4 IP/子网 gw4 IP
+3、关闭网卡 nmcli connection down ens33
+4、启动网卡 nmcli connection up ens33
+5、查看绑定状态 nmcli device
+6、 cat /etc/dhcp/dhcpd.conf  查看提示目录
+7、cp /usr/share/doc/dhcp-4.2.5/dhcpd.conf.example （空格）/etc/dhcp/dhcpd.conf (目标路径 目的路径)
+8、编辑DHCP文件 vim /etc/dhcp/dhcpd.conf
+9、修改配置文件
+10、做快照 （快照2）
+11、恢复至快照1做完整克隆
+12、完成后恢复至快照1 打开克隆机
+13、（两台）设置->网络适配器->LAN区段->添加LAN1
+14、克隆机修改配置文件NOBOOT=yes
+15、重启网卡
+
+
+
+
+本地Yum源
+1、连接ISO光盘
+2、查看连接的光盘路径 df -Th
+3、挂载光盘 mount /dev/sr0 /media (dev/sr0光盘连接默认路径 挂载到media)
+4、配置Yum源 cd /etc/yum.repos.d
+5、删除默认yum源 rm -rf *
+6、创建yum源 vi centos.repo
+[centos]
+name=centos
+enabled=1
+gpgcheck=0
+baseurl=file:///media
+7、清除缓存 yum clean all
+8、加载缓存加载缓存 yum makecache
+9、测试yum源 yum repolist all
+
+
+
+单用户
+1、重启虚拟机
+2、Grub菜单选择内核
+3、进入内核 “e”
+4、在Linux16最后面添加rd.break      #让系统在引导过程中断,绕过root密码给我们一个Shell。
+5、删除rhgb quiet   #可以让我们看到加载过程 
+6、完成Ctrl+X进行引导
+3、挂载根
+mount -o remount,rw  /sysroot    #把根以读写的方式进行挂载
+4、切换到根
+chroot /sysroot
+5、更改root密码
+echo "redhat" | passwd --stdin root 
+#      "密码"                 用户名 
+6、重新加载Selinux安全机制
+touch /.autorelabel 
+7.退出以读写形式的根
+exit
+8.退出当前Shell
+exit
