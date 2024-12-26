@@ -1,3 +1,4 @@
+series_id,car_type,driver_form,fuel_form,acceleration_time,max_speed
 20090,小型SUV,四驱,汽油,12s,150Km/h
 5820,中大型SUV,后驱/四驱,增程式,4.8-8.2s,190Km/h
 5343,中型SUV,四驱/后驱,增程式/纯电动,4.3-7.1s,210Km/h
